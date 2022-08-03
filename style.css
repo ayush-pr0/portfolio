@@ -6,13 +6,16 @@
 }
 
 body {
-    background: #423784;
+    background: #080808;
     color: #fff;
 }
 
 header {
     width: 100%;
     height: 100vh;
+    background-image: url(./images/background.png);
+    background-size: cover;
+    background-position: center;
 }
 
 header .container {
@@ -26,6 +29,10 @@ nav {
     flex-wrap: wrap;
 }
 
+nav .logo {
+    width: 140px;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -33,15 +40,33 @@ nav ul li {
 }
 
 nav ul li a {
-    position: relative;
+    color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
-    color: #fff;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #ac2ce1;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transition-delay: 0.05s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 .header-area {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header-area-text {
@@ -56,5 +81,27 @@ nav ul li a {
 }
 
 .header-area-text h1 span {
+    /* color: #ff004f; */
     color: #ac2ce1;
+}
+
+.header-area-image img {
+    background-position: relative;
+    transform: translateY(+10%);
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 500px;
+    height: 500px;
+    animation-delay: 0.3s;
+    animation: anime 1.4s infinite ease-in-out alternate;
+    -webkit-animation: anime 1.4s infinite ease-in-out alternate;
+    -moz-animation: anime 1.4s infinite ease-in-out alternate;
+}
+
+@keyframes anime {
+    100% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+    }
 }
