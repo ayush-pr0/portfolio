@@ -6,15 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ayush's Portfolio</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="./script.js"></script>
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="container">
-                <nav>
-                    <img src="./images/logo.png" alt="logo" />
+                <nav id="nav-bar">
+                    <a href="#header"
+                        ><img src="./images/logo.png" alt="logo" class="logo"
+                    /></a>
+
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact</a></li>
@@ -24,10 +28,18 @@
                 <div class="header-area">
                     <div class="header-area-text">
                         <h1>
-                            Hi, I'm <span>Ayush</span> <br />
-                            From India
+                            Hi, I'm <span id="name">Ayush</span> <br />
+                            From <span id="india">India</span>
                         </h1>
-                        <p>Programmer 👨‍💻</p>
+
+                        <div class="header-area-multi-text">
+                            <div class="static-text">I'm a</div>
+                            <ul class="option-text">
+                                <li><span>Programmer </span></li>
+                                <li><span>Developer</span></li>
+                                <li><span>Technophile</span></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="header-area-image">
@@ -36,5 +48,85 @@
                 </div>
             </div>
         </header>
+
+        <!-- about -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./images/user.png" alt="user" />
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dicta incidunt possimus illo quasi eaque
+                            praesentium pariatur molestias modi. Voluptatibus
+                            illo optio quas dolor enim, non facere velit
+                            accusantium veritatis numquam. Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Corrupti at
+                            voluptas fuga? Perspiciatis, itaque eius. Voluptas
+                            fugiat sequi, dolor quod amet ratione corrupti
+                            recusandae magnam aliquam, suscipit architecto
+                            explicabo saepe?
+                        </p>
+
+                        <div class="tab-titles">
+                            <p
+                                class="tab-links active-link"
+                                onclick="opentab('education')"
+                            >
+                                Education
+                            </p>
+                            <p class="tab-links" onclick="opentab('traning')">
+                                Traning
+                            </p>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li>
+                                    <span>B.Tech. CSE</span><br />Arya College
+                                    of Engineering & I.T. (2019 - Present)
+                                </li>
+                                <li>
+                                    <span>Senior Secondary School</span
+                                    ><br />Central Academy (2018 - 19)
+                                </li>
+                                <li>
+                                    <span>Secondary School</span><br />Central
+                                    Academy (2017 - 18)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Traning -->
+                        <div class="tab-contents" id="traning">
+                            <ul>
+                                <li>
+                                    <span>Programming in Python</span><br />
+                                    Grras Solutions (P) Ltd. (09/2021 - 04/2022)
+                                    <br />
+                                    - I have learned the basics and core of
+                                    python language, how python works
+                                    dynamically, scoping and many more about
+                                    python in this training program.
+                                </li>
+                                <li>
+                                    <span>Full Stack Web Development</span
+                                    ><br />
+                                    Grras Solutions (P) Ltd. (05/2022 - Present)
+                                    <br />
+                                    - I'm learning front-end and back-end
+                                    technologies like HTML, CSS, JavaScript,
+                                    React.js, Node.js, and many more.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
