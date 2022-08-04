@@ -1,3 +1,14 @@
+:root {
+    --light: #eee;
+    --lighter: #eeeeee1a;
+    --pink: #ff66c4;
+    --purple: #ac2ce1;
+    --dark_purple: #423784;
+
+    --saffron: #ff7b00;
+    --green: #009238;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +16,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: #080808;
-    color: #fff;
+    background: var(--dark_purple);
+    color: var(--light);
 }
 
 header {
@@ -30,7 +45,8 @@ nav {
 }
 
 nav .logo {
-    width: 140px;
+    width: 180px;
+    cursor: pointer;
 }
 
 nav ul li {
@@ -40,7 +56,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--light);
+    padding: 2px;
     text-decoration: none;
     font-size: 1.2rem;
     position: relative;
@@ -50,7 +67,7 @@ nav ul li a::after {
     content: "";
     width: 0;
     height: 3px;
-    background: #ac2ce1;
+    background: var(--purple);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -78,11 +95,88 @@ nav ul li a:hover::after {
 .header-area-text h1 {
     font-size: 4rem;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.header-area-text h1 span {
-    /* color: #ff004f; */
-    color: #ac2ce1;
+.header-area-text h1 #name {
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.header-area-text #india {
+    font-weight: 700;
+    background-image: linear-gradient(
+        to bottom right,
+        var(--saffron),
+        var(--light),
+        var(--green)
+    );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-area-multi-text {
+    display: flex;
+    align-items: center;
+}
+
+.header-area-multi-text .static-text {
+    color: var(--light);
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.header-area-multi-text .option-text {
+    padding-left: 15px;
+    font-size: 2.6rem;
+    width: 320px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.header-area-multi-text .option-text li {
+    list-style: none;
+    top: 0;
+    position: relative;
+    animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -276px;
+    }
+}
+
+.option-text li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.option-text li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    background: var(--dark_purple);
+    border-left: 2px solid var(--purple);
+    animation: typing 3s steps(11) infinite;
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 20px);
+    }
+    100% {
+        left: 0;
+    }
 }
 
 .header-area-image img {
@@ -104,4 +198,94 @@ nav ul li a:hover::after {
         -webkit-transform: translateY(20px);
         -moz-transform: translateY(20px);
     }
+}
+
+/* about */
+
+#about {
+    padding: 120px 0;
+    color: var(--light);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    border-radius: 20px;
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 80%;
+    margin-left: 20%;
+    background-color: var(--lighter);
+    /* height: 80%; */
+    border-radius: 20px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    margin-bottom: 20px;
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: var(--light);
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--purple);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    transition-delay: 0.05s;
+}
+
+.tab-links.active-link::after {
+    width: 70%;
+}
+
+/* .tab-links:hover::after {
+    width: 100%;
+} */
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.tab-contents ul li span {
+    display: inline-block;
+    margin: 5px 0;
+    color: var(--pink);
+    font-size: 1.1rem;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
 }
