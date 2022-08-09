@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ayush's Portfolio</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="./script.js"></script>
+        <script src="./script.js" defer></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+            crossorigin="anonymous"
+            defer
+        ></script>
     </head>
     <body>
         <header id="header">
@@ -19,8 +24,8 @@
                     <ul>
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#traning">Traning</a></li>
+                        <li><a href="#project">Project</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -78,8 +83,8 @@
                             >
                                 Education
                             </p>
-                            <p class="tab-links" onclick="opentab('traning')">
-                                Traning
+                            <p class="tab-links" onclick="opentab('skills')">
+                                Skills
                             </p>
                         </div>
 
@@ -101,31 +106,136 @@
                             </ul>
                         </div>
 
-                        <!-- Traning -->
-                        <div class="tab-contents" id="traning">
+                        <!-- Skills -->
+                        <div class="tab-contents" id="skills">
                             <ul>
                                 <li>
-                                    <span>Programming in Python</span><br />
-                                    Grras Solutions (P) Ltd. (09/2021 - 04/2022)
+                                    <span>Language/Library</span>
                                     <br />
-                                    - I have learned the basics and core of
-                                    python language, how python works
-                                    dynamically, scoping and many more about
-                                    python in this training program.
+                                    C language, C++, Core Java, Basic Python,
+                                    HTML, CSS, SQL, JavaScript, React.js,
+                                    Node.js
+                                    <br />
                                 </li>
                                 <li>
-                                    <span>Full Stack Web Development</span
-                                    ><br />
-                                    Grras Solutions (P) Ltd. (05/2022 - Present)
+                                    <span>Tools</span>
                                     <br />
-                                    - I'm learning front-end and back-end
-                                    technologies like HTML, CSS, JavaScript,
-                                    React.js, Node.js, and many more.
+                                    VS Code, MySQL, PostgreSQL, Postman
+                                    <br />
+                                </li>
+                                <li>
+                                    <span>Other Subjcts</span>
+                                    <br />
+                                    Data Structure and Algorithm, Object
+                                    Oriented Programming, Database Management
+                                    Syatem, Operating System, Computer Networks
+                                    <br />
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Traning -->
+        <div id="traning">
+            <div class="container">
+                <h1 class="sub-title">Traning</h1>
+                <div class="traning-list">
+                    <div>
+                        <i class="fa-brands fa-python icon"></i>
+                        <h2>Programming in Python</h2>
+                        <span
+                            >Grras Solutions (P) Ltd. (09/2021 - 04/2022)</span
+                        >
+                        <p>
+                            - I have learned the basics and core of python
+                            language, how python works dynamically, scoping and
+                            many more about python in this training program.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-laptop-code icon"></i>
+                        <h2>Full Stack Web Development</h2>
+                        <span
+                            >Grras Solutions (P) Ltd. (05/2022 - Present)</span
+                        >
+                        <p>
+                            - I'm learning front-end and back-end technologies
+                            like HTML, CSS, JavaScript, React.js, Node.js, and
+                            many more.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="project">
+            <div class="container">
+                <h1 class="sub-title">Project</h1>
+                <div class="project-list">
+                    <div class="project-item">
+                        <img src="./images/pro-type.png" alt="" />
+                        <div class="layer">
+                            <i class="fa-solid fa-keyboard icon"></i>
+                            <h3>Pro To Type</h3>
+                            <a
+                                href="https://ayush-pr0.github.io/pro-to-typer/"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-arrow-up-right-from-square link"
+                                ></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/todo-list.png" alt="" />
+                        <div class="layer">
+                            <i class="fa-solid fa-clipboard-check icon"></i>
+                            <h3>To Do List</h3>
+                            <a
+                                href="https://ayush-pr0.github.io/todo/"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-arrow-up-right-from-square link"
+                                ></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/roll-dice.png" alt="" />
+                        <div class="layer">
+                            <i class="fa-solid fa-dice icon"></i>
+                            <h3>Roll The Dice</h3>
+                            <a
+                                href="https://ayush-pr0.github.io/roll-the-dice-game/"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-arrow-up-right-from-square link"
+                                ></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="./images/guess-number.png" alt="" />
+                        <div class="layer">
+                            <i class="fa-solid fa-hundred-points icon"></i>
+                            <h3>Guess The Number</h3>
+                            <a
+                                href="https://ayush-pr0.github.io/guess-my-number/"
+                                target="_blank"
+                                ><i
+                                    class="fa-solid fa-arrow-up-right-from-square link"
+                                ></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
             </div>
         </div>
     </body>
